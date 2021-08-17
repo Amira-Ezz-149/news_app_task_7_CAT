@@ -21,7 +21,6 @@ class NewsService {
 }*/
 import 'package:dio/dio.dart';
 import 'package:news_app_task_7_cat/model/news.dart';
-import 'dart:convert';
 
 class NewsApiService{
   static String apiKey = '196cd3f9b33d4947b4c98512d4d51404';

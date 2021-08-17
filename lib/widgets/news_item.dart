@@ -5,6 +5,7 @@ import 'package:news_app_task_7_cat/screens/news_item_details.dart';
 
 class NewsItem extends StatelessWidget {
   final News item;
+
   NewsItem({this.item});
 
   @override
@@ -12,11 +13,13 @@ class NewsItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => NewsItemDetails(
-                      item: item,
-                    ),),);
+          context,
+          MaterialPageRoute(
+            builder: (context) => NewsItemDetails(
+              item: item,
+            ),
+          ),
+        );
       },
       child: Row(
         children: [
@@ -31,9 +34,8 @@ class NewsItem extends StatelessWidget {
                 fit: BoxFit.fill,
                 image: item.urlToImage == null
                     ? NetworkImage(
-                    //    'https://i.morioh.com/2020/02/28/1195ab76f0b1.jpg'
-                  'https://eftsona.files.wordpress.com/2020/01/wp-1577843827873.png'
-                )
+                        //    'https://i.morioh.com/2020/02/28/1195ab76f0b1.jpg'
+                        'https://eftsona.files.wordpress.com/2020/01/wp-1577843827873.png')
                     : NetworkImage('${item.urlToImage}'),
               ),
             ),
@@ -45,16 +47,15 @@ class NewsItem extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(15),
               decoration: BoxDecoration(
-                color: Colors.green.shade100,
-               borderRadius: BorderRadius.circular(15)
-
-              ),
+                  color: Colors.green.shade100,
+                  borderRadius: BorderRadius.circular(15)),
               child: Column(
                 children: [
                   Text(
                     item.title,
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 4,style: TextStyle(fontSize: 18),
+                    maxLines: 4,
+                    style: TextStyle(fontSize: 18),
                   ),
                   SizedBox(
                     height: 10,
