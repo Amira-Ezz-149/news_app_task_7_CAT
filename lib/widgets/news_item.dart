@@ -25,13 +25,15 @@ class NewsItem extends StatelessWidget {
             //  height: 120,
             height: 120,
             decoration: BoxDecoration(
-              color: Colors.grey.shade300,
+              color: Colors.green.shade100,
               borderRadius: BorderRadius.circular(10.0),
               image: DecorationImage(
                 fit: BoxFit.fill,
                 image: item.urlToImage == null
                     ? NetworkImage(
-                        'https://i.morioh.com/2020/02/28/1195ab76f0b1.jpg')
+                    //    'https://i.morioh.com/2020/02/28/1195ab76f0b1.jpg'
+                  'https://eftsona.files.wordpress.com/2020/01/wp-1577843827873.png'
+                )
                     : NetworkImage('${item.urlToImage}'),
               ),
             ),
@@ -40,30 +42,38 @@ class NewsItem extends StatelessWidget {
             width: 15,
           ),
           Expanded(
-            child: Column(
-              children: [
-                Text(
-                  item.title,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 4,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '30 mins most',
-                      style: kTimeStyle,
-                    ),
-                    Text(
-                      '30 mins most',
-                      style: kTimeStyle,
-                    ),
-                  ],
-                ),
-              ],
+            child: Container(
+              padding: EdgeInsets.all(15),
+              decoration: BoxDecoration(
+                color: Colors.green.shade100,
+               borderRadius: BorderRadius.circular(15)
+
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    item.title,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 4,style: TextStyle(fontSize: 18),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '30 mins most',
+                        style: kTextTimeStyle,
+                      ),
+                      Text(
+                        '${item.publishedAt},',
+                        style: kTextTimeStyle,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

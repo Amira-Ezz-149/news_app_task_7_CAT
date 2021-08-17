@@ -8,11 +8,12 @@ final String urlToImage;
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 5),
       width:MediaQuery.of(context).size.width / 3.5 ,
     //  height: 120,
       height: height,
       decoration: BoxDecoration(
-        color: Colors.grey.shade300,
+          color: Colors.green.shade100,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(15)),
           image: DecorationImage(
             fit: BoxFit.fill,

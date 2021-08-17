@@ -44,7 +44,7 @@ List<News> news =[];
               children: [
                 Text(
                   'Walk With Trend',
-                  style: kWalkWithTrendStyle,
+                  style: kTextTitleStyle,
                 ),
                 Text(
                   'Don\'t stay behind, read the trend',
@@ -54,7 +54,7 @@ List<News> news =[];
                   padding: const EdgeInsets.symmetric(vertical: 25.0),
                   child: Text(
                     'Top reads of the day',
-                    style: kWalkWithTrendStyle,
+                    style: kTextTitleStyle,
                   ),
                 ),
                 Expanded(

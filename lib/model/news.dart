@@ -7,6 +7,7 @@ class News {
     this.url = data['url'];
     this.description = data['description'];
     this.urlToImage = data['urlToImage'];
+    this.publishedAt = data['publishedAt'];
   }
 
   String author;
@@ -14,6 +15,7 @@ class News {
   String description;
   String url;
   String urlToImage;
+  String publishedAt;
 
 
 
